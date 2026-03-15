@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spin 2 Win Deluxe</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- GSAP for physical rotation animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+    <div class="game-container">
+        <!-- Left Panel: Removed to centralize and fit reference image -->
+
+        <!-- Center: Roulette Canvas -->
+        <div class="roulette-wrapper">
+            <div class="pointer"></div>
+            <canvas id="rouletteCanvas" width="640" height="640"></canvas>
+            
+            <!-- Cinematic Reveal -->
+            <div id="cinematicCenter" class="cinematic-center">
+                <div class="cinematic-ring"></div>
+                <div class="cinematic-inner"></div>
+                <span id="cinematicNumber" class="cinematic-number"></span>
+            </div>
+
+            <!-- Timer UI -->
+            <div id="timerDisplay" class="timer-display">
+                BETS CLOSE IN <span id="timerSeconds">30</span>
+            </div>
+        </div>
+
+        <!-- Right Panel: Combined Pay Table, Last Results & Statistics -->
+        <div class="panel right-panel deluxe-stats">
+            <div id="payTableContainer"></div>
+            <div id="lastResultsContainer"></div>
+            <div id="statsContainer" class="stats-container-deluxe">
+                <!-- Content will be fully injected via script.js -->
+            </div>
+        </div>
+    </div>
+    
+    <!-- Cinematic Overlay -->
+    <div id="cinematicOverlay" class="cinematic-overlay"></div>
+    <script src="script.js"></script>
+</body>
+</html>
